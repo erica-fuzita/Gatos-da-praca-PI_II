@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.dashboard-wrapper {
+  font-family: 'roboto';
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #c7dfc1 !important;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 260px;
+  background-color: #24472b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 22px;
+}
+
+/* título do menu */
+.sidebar-header {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* lista */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.sidebar-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  color: #e5e5e5;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: 'roboto';
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.sidebar-link.active {
+  background: linear-gradient(135deg, #3a6443, #34593a);
+  color: #ffffff;
+}
+
+.sidebar-link .icon {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-link .icon svg {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  display: block;
+}
+
+.sidebar-link .text {
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+/* botão sair */
+.logout-btn {
+  margin-top: auto;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #f0a120, #d88d1b);
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(135deg, #e39622, #c47b18);
+}
+
+/* ===== ÁREA DE CONTEÚDO ===== */
+.dashboard-content {
+  flex: 1;
+  padding: 24px 32px;
+  margin: 0;
+  background: #bcd6b6; 
+  min-height: 100vh;
+}
+
+.sidebar-header h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-nav {
+  gap: 10px;
+}
+
+.dashboard-wrapper {
+  background-color: #bcd6b6 !important;
+}
+
+/* ====================================================== */
+/* === CORREÇÃO GLOBAL PARA BOTÕES DO DASHBOARD ======== */
+/* ====================================================== */
+
+.dashboard-wrapper button {
+  width: auto !important;
+  max-width: max-content !important;
+  flex: 0 0 auto !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap !important;
+  padding: 6px 14px;
+  box-sizing: border-box;
+}

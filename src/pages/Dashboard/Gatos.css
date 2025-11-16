@@ -1,0 +1,174 @@
+.gatos-page {
+  padding: 32px 24px;
+  font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.gatos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.gatos-header h1 {
+  color: #2e4932;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.btn-primario,
+.btn-secundario,
+.btn-menor {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-primario {
+  background: #2e4932;
+  color: #fff;
+}
+
+.btn-primario:hover {
+  background: #3b6a41;
+}
+
+.btn-secundario {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.btn-secundario:hover {
+  background: #d1d5db;
+}
+
+.btn-menor {
+  padding: 6px 10px;
+  margin-right: 6px;
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.btn-menor:hover {
+  background: #d1d5db;
+}
+
+.btn-perigo {
+  background: #f87171;
+  color: #fff;
+}
+
+.btn-perigo:hover {
+  background: #ef4444;
+}
+
+.tabela-container {
+  overflow-x: auto;
+}
+
+.tabela-gatos {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.tabela-gatos th,
+.tabela-gatos td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.tabela-gatos th {
+  background: #f3f4f6;
+  color: #374151;
+  font-weight: 600;
+}
+
+.thumb-gato {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.col-acoes {
+  white-space: nowrap;
+}
+
+/* FORMULÁRIO */
+
+.form-gato {
+  max-width: 900px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  border: 1px solid rgba(46, 73, 50, 0.08);
+}
+
+.campo-linha {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.campo {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.campo label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #2e4932;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  padding: 8px 10px;
+  font-size: 0.92rem;
+}
+
+.campo textarea {
+  resize: vertical;
+}
+
+.acoes-form {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Mensagens */
+
+.msg-sucesso,
+.msg-erro {
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.msg-sucesso {
+  background: #e6f4ea;
+  color: #22543d;
+  border: 1px solid #c1e3cb;
+}
+
+.msg-erro {
+  background: #fde8e8;
+  color: #9b2c2c;
+  border: 1px solid #fac5c5;
+}

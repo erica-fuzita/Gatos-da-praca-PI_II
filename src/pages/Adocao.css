@@ -1,0 +1,194 @@
+/* ===== CONTAINER PRINCIPAL ===== */
+.adocao-container {
+  margin-top: 0px;
+  padding-bottom: 50px;
+  background-color: #b7d8a6; /* contraste melhorado */
+  min-height: 100vh;
+}
+
+/* ===== BANNER ===== */
+.adocao-banner img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* ===== BARRA DE PESQUISA ===== */
+.barra-pesquisa {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto 20px;
+  width: 80%;
+  max-width: 900px;
+}
+
+.barra-pesquisa input {
+  flex: 1; /* agora só o input cresce */
+  padding: 12px 16px;
+  border: 2px solid #2e4932;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  font-family: 'roboto';
+  font-size: 1rem;
+  color: #1d3324;
+}
+
+.barra-pesquisa input:focus {
+  outline: 3px solid #e39622;
+}
+
+.barra-pesquisa button {
+  padding: 12px 22px;
+  background-color: #2e4932;
+  color: #fff;
+  border: 2px solid #2e4932;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'roboto';
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+  flex-shrink: 0;     /* impede o botão de esticar ou comprimir */
+  width: auto;        /* garante tamanho natural */
+  white-space: nowrap; /* impede quebrar texto */
+}
+
+/* ===== GRID DE CARDS ===== */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  column-gap: 14px;
+  row-gap: 40px;
+  width: 76%;
+  margin: 40px auto;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+/* ===== CARD ===== */
+.card-gato {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10); /* contraste melhorado */
+  padding: 18px;
+  text-align: center;
+  font-family: 'roboto';
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 580px;
+}
+
+.card-gato:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== IMAGEM ===== */
+.img-wrapper img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card-gato.adotado img {
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+/* ===== SOBREPOSIÇÃO ADOTADO ===== */
+.overlay-adotado {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(46, 73, 50, 0.9);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* ===== NOME DO GATO ===== */
+.card-gato h3 {
+  color: #1d3324; /* mais contraste */
+  margin-bottom: 0;
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* ===== LINHAS ===== */
+.card-divider {
+  border: none;
+  border-top: 1px solid #8fae8c; /* contraste melhorado */
+  margin: 10px 0;
+  width: 100%;
+}
+
+/* ===== INFORMAÇÕES ===== */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  width: 90%;
+  margin: 10px auto;
+  text-align: left;
+}
+
+.info-item span {
+  color: #1d3324; /* contraste */
+}
+
+.info-grid strong {
+  color: #0f2612; /* verde escuro e legível */
+  font-weight: 700;
+}
+
+/* ===== DESCRIÇÃO DO GATO ===== */
+.descricao {
+  text-align: center;
+  color: #1d3324;
+  font-size: 1rem;
+  margin-top: 10px;
+  line-height: 1.3;
+  font-family: "roboto";
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== BOTÃO ADOTAR ===== */
+.btn-adotar {
+  background-color: #2e4932;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-top: auto;
+  margin-left: 6%;
+  width: 90%;
+  font-size: 12pt;
+  text-transform: uppercase;
+  font-family: 'roboto';
+  font-weight: 500; /* leve aumento da legibilidade */
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-adotar:hover,
+.btn-adotar:focus {
+  background-color: #e39622;
+  outline: none;
+}
+
+/* ===== TEXTO QUANDO NÃO ENCONTRA ===== */
+.nenhum-resultado {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.1rem;
+  color: #1d3324;
+}

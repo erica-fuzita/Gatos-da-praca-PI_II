@@ -1,0 +1,182 @@
+.section-container {
+  padding: 20px 30px;
+}
+
+.section-container h1 {
+  color: #2e4932;
+  margin-bottom: 20px;
+}
+
+/* ====== TABELA ====== */
+.table-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table-list th,
+.table-list td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.table-list th {
+  background: #f0f5f0;
+  font-weight: 600;
+}
+
+.edit-btn {
+  background: #4a7050;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background: #3a5840;
+}
+
+/* ====== POPUP ====== */
+.popup-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.popup-card-large {
+  background: #ffffff;
+  padding: 30px;
+  width: 500px;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Botão X */
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Campos do popup */
+.popup-card-large input,
+.popup-card-large textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+/* Área de botões do popup */
+.popup-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.save-btn {
+  background: #2e4932;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: #3a6140;
+}
+
+.delete-btn {
+  background: #c0392b;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #a32d22;
+}
+
+/* CONFIRMAR FECHAR */
+.popup-confirm-small {
+  background: white;
+  padding: 25px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* ============================= */
+/*  OVERRIDES PARA CORRIGIR X   */
+/*  E TIRAR CABEÇALHO LARANJA   */
+/* ============================= */
+
+/* Remove qualquer pseudo-elemento que faça uma faixa colorida no topo */
+.popup-card-large::before,
+.popup-card-large::after {
+  content: none !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Se existir algum "header" antigo do popup, tira o fundo laranja */
+.popup-card-large .popup-header,
+.popup-card-large .popup-top {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Corrige o X que está herdando estilo de botão genérico */
+.popup-card-large button.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: auto !important;
+  height: auto !important;
+  background: transparent !important;
+  color: #222 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: none !important;
+}
+
+/* Garante que só os botões de ação fiquem maiores, não o X */
+.popup-card-large .popup-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.popup-card-large .popup-actions .delete-btn,
+.popup-card-large .popup-actions .save-btn {
+  min-width: 140px;
+  padding: 10px 20px;
+}

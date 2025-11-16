@@ -1,0 +1,396 @@
+/* ===== CONTAINER GERAL ===== */
+.gatos-admin-container {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== CARD BRANCO PRINCIPAL ===== */
+.gatos-admin-card {
+  background: #ffffff;
+  padding: 28px 32px;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* garante que nenhum botão dentro do card fique 100% de largura */
+.gatos-admin-card button {
+  width: auto !important;
+  max-width: 220px;
+}
+
+/* ===== TOPO: TÍTULO + BOTÃO NOVO GATO ===== */
+.gatos-admin-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.gatos-admin-card h1 {
+  font-size: 1.6rem;
+  color: #2e4932;
+  margin: 0;
+}
+
+/* botão + Novo gato (direita, pequeno) */
+.btn-novo-gato {
+  background: #2e4932;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.btn-novo-gato:hover {
+  background: #3a6443;
+}
+
+/* ===== TEXTOS AUXILIARES ===== */
+.gatos-subtitulo {
+  color: #555;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+}
+
+.gatos-erro {
+  color: #b00020;
+  margin-bottom: 10px;
+}
+
+/* ===== TABELA ===== */
+.gatos-tabela-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.gatos-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.gatos-tabela thead {
+  background: #2e4932;
+  color: #fff;
+}
+
+.gatos-tabela th,
+.gatos-tabela td {
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.gatos-tabela th {
+  font-weight: 600;
+}
+
+/* todas as linhas em branco */
+.gatos-tabela tbody tr {
+  background: #ffffff !important;
+}
+
+.gatos-tabela tbody tr:nth-child(even),
+.gatos-tabela tbody tr:nth-child(odd) {
+  background: #ffffff !important;
+}
+
+/* hover leve */
+.gatos-tabela tbody tr:hover {
+  background: #f2f2f2 !important;
+}
+
+/* miniatura */
+.gato-miniatura {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gato-miniatura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== COLUNA AÇÕES ===== */
+.gatos-acoes {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.btn-editar,
+.btn-excluir {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  width: auto;
+  flex-shrink: 0;
+}
+
+/* editar (verde) */
+.btn-editar {
+  background: #2e4932;
+  color: #fff;
+}
+
+.btn-editar:hover {
+  background: #3c6341;
+}
+
+/* excluir (vermelho) */
+.btn-excluir {
+  background: #c0392b;
+  color: #fff;
+}
+
+.btn-excluir:hover {
+  background: #e74c3c;
+}
+
+/* ===== POPUP OVERLAY ===== */
+.gato-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+/* ===== CARD DO POPUP ===== */
+.gato-popup-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 28px;
+  width: 600px;
+  max-width: 95vw;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* HEADER */
+.gato-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.gato-popup-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #2e4932;
+}
+
+.gato-popup-close {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #555;
+}
+
+/* TOPO: FOTO + DADOS */
+.gato-popup-top {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.gato-popup-foto-wrapper {
+  flex-shrink: 0;
+}
+
+.gato-popup-foto-quadrado {
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gato-popup-foto-quadrado img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gato-popup-dados {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.gato-popup-nome {
+  font-size: 1.2rem;
+  margin: 0 0 6px;
+  color: #2e4932;
+}
+
+.gato-popup-dados p {
+  margin: 2px 0;
+}
+
+.gato-popup-descricao-resumo {
+  margin-top: 6px;
+}
+
+/* ===== FORM ===== */
+.gato-popup-form {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gato-popup-linha {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.gato-popup-linha label {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.gato-popup-linha input,
+.gato-popup-linha select {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #b0c4b1;
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+.gato-popup-checkbox {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.gato-popup-full {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.gato-popup-full input,
+.gato-popup-full textarea {
+  margin-top: 4px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #b0c4b1;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+/* ===== BOTÕES DO POPUP ===== */
+.gato-popup-botoes {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.btn-salvar,
+.btn-excluir-popup {
+  min-width: 140px;
+  padding: 10px 0;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.btn-salvar {
+  background: #2e4932;
+  color: #fff;
+}
+
+.btn-salvar:hover {
+  background: #3c6341;
+}
+
+.btn-excluir-popup {
+  background: #c0392b;
+  color: #fff;
+}
+
+.btn-excluir-popup:hover {
+  background: #e74c3c;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 700px) {
+  .gatos-admin-container {
+    padding: 16px;
+  }
+
+  .gatos-admin-card {
+    padding: 20px 18px;
+  }
+
+  .gato-popup-card {
+    padding: 18px 16px;
+  }
+
+  .gato-popup-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gato-popup-dados {
+    width: 100%;
+  }
+
+  .gato-popup-linha {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .gato-popup-checkbox {
+    margin-top: 0;
+  }
+
+  .gatos-acoes {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

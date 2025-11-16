@@ -1,0 +1,38 @@
+.indicadores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.indicador-card {
+  background: #e4f3e1;
+  padding: 18px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease;
+}
+
+.indicador-card:hover {
+  transform: translateY(-4px);
+}
+
+.indicador-card .icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.indicador-card .titulo {
+  color: #2e4932;
+  font-size: 0.9rem;
+  margin: 4px 0;
+}
+
+.indicador-card .valor {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #3b5d40;
+}

@@ -1,0 +1,178 @@
+/* ===== FUNDO ===== */
+.contato-wrapper {
+  background-image: url("/banners/BG-03.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* ===== CONTAINER CENTRAL ===== */
+.contato-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== FORMULÁRIO ===== */
+.form-contato {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 15px;
+
+  position: relative;
+  z-index: 5;
+}
+
+/* ===== TÍTULO E TEXTO DE APOIO ===== */
+.form-contato .contato-intro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-contato .contato-intro h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #2e4932;
+  margin: 0 0 8px 0;
+}
+
+.form-contato .contato-intro p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ===== CAMPOS ===== */
+.form-contato input,
+.form-contato textarea {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-contato textarea {
+  resize: vertical;
+}
+
+/* ===== BOTÃO ===== */
+.form-contato button {
+  background-color: #2e4932;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-contato button:hover {
+  background-color: #e39622;
+}
+
+/* ===== POP-UP ===== */
+.popup-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.popup-content {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.popup-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.popup-header h3 {
+  color: #2e4932;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.popup-text p {
+  margin: 4px 0;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.btn-fechar {
+  background-color: #2e4932;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 6px;
+}
+
+.btn-fechar:hover {
+  background-color: #497a45;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+  .form-contato {
+    padding: 28px 20px;
+  }
+  .form-contato .contato-intro h2 {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,56 @@
+/* === Container === */
+.carousel-container {
+  width: 100%;
+  aspect-ratio: 16 / 6; /* cria altura proporcional automaticamente */
+  overflow: hidden;
+  background-color: #E8F3E0;
+}
+
+
+/* === Ajuste das imagens === */
+.carousel-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center; /* centraliza de verdade */
+  display: block;
+}
+
+
+.carousel-container img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+/* === Pontinhos === */
+.swiper-pagination {
+  bottom: 15px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #4A5D42;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  border: 2px solid #E8F3E0;
+}
+
+.swiper-pagination-bullet-active {
+  background: #2E4932;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* === Responsividade === */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 240px;
+  }
+}

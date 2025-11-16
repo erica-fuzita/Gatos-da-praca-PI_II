@@ -1,0 +1,127 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  width: 90%;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  position: relative;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #3d3d3d;
+}
+
+.modal-content h2 {
+  text-align: center;
+  color: #2e4932;
+  margin-bottom: 10px;
+}
+
+.modal-gato-nome {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.modal-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2e4932;
+  margin-top: 10px;
+  display: block;
+}
+
+.modal-form input,
+.modal-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.modal-form textarea {
+  height: 80px;
+  resize: none;
+}
+
+.modal-btn {
+  background: #2e4932;
+  color: white;
+  padding: 12px;
+  border: none;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.modal-btn:hover {
+  background: #3b6a41;
+}
+
+.modal-sucesso {
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ======== BLINDAGEM DO BOTÃO DE FECHAR ======== */
+.modal-content button.modal-close {
+  all: unset !important; /* REMOVE todo CSS herdado */
+  position: absolute !important;
+  top: 12px !important;
+  right: 12px !important;
+  font-size: 26px !important;
+  font-weight: 600 !important;
+  color: #222 !important;
+  cursor: pointer !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Impede que QUALQUER button global afete botões dentro do modal */
+.modal-content button {
+  width: auto !important;
+  background: #2e4932 !important;
+  color: white !important;
+  padding: 10px 14px !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+}
+

@@ -1,0 +1,137 @@
+/* ----- CONTAINER DO HEADER ----- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #2E4932; /* verde escuro */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.header-container {
+  width: 90%;
+  max-width: 1200px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ----- LOGO ----- */
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logo-img {
+  width: 200px !important;
+  height: auto !important;
+  filter: brightness(0) invert(1);
+  max-width: none !important;
+  object-fit: contain !important;
+}
+
+/* ----- MENU ----- */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-menu a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'roboto';
+  font-weight: 600;
+  transition: color 0.3s ease;
+  white-space: 'text-wrap-mode';
+}
+
+.nav-menu a:hover { color: #FFD166; }
+
+/* Ícones do menu (imagens do /public) */
+.menu-icon {
+  width: 40px !important;
+  height: 40px !important;
+  flex: 0 0 40px;
+  filter: brightness(0) invert(1);
+  object-fit: contain !important;
+  max-width: 40px !important;
+}
+
+/* ----- BLOCO LOGIN/PAINEL/SAIR ----- */
+.login {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Botão "Entrar" (Link) */
+.login-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #000000;
+  background-color: #97b18c;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.login-link:hover { background-color: #e39622; transform: scale(1.05); }
+
+/* Link "Painel" (Dashboard) */
+.dashboard-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #4A5D42;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.dashboard-link:hover { background-color: #3B4C34; transform: scale(1.05); }
+
+/* Botão "Sair" */
+.logout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #4A5D42;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.logout-btn:hover { background-color: #3B4C34; transform: scale(1.05); }
+
+/* Ícone Lucide (User/LogOut/Dashboard) */
+.icon-login {
+  width: 18px !important;
+  height: 18px !important;
+  flex: 0 0 18px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .logo-img { width: 150px !important; }
+  .nav-menu { gap: 1rem; }
+  .nav-menu a { font-size: 1.6rem; }
+
+  .header img { width: auto !important; height: auto !important; }
+
+}
+

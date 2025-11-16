@@ -1,0 +1,199 @@
+.perfil-admin-page {
+  padding: 32px 24px;
+  background: transparent;
+}
+
+.perfil-admin-page h1 {
+  color: #2e4932;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-family: 'roboto';
+}
+
+/* CARD */
+.perfil-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 18px;
+  max-width: 950px;
+  width: 100%;
+  margin: 40px auto;      /* agora a margem está fora e não cria moldura lateral */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  font-family: 'roboto';
+}
+
+/* FOTO */
+.perfil-foto-area {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+ 
+}
+
+.perfil-foto {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #2e4932;
+  margin-bottom: 20px;
+}
+
+/* INFO */
+.perfil-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.perfil-info-bloco {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #2e4932;
+}
+
+/* INPUTS REDUZIDOS */
+input {
+  width: 90%;
+  margin: 0 auto;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid #c7dfc1;
+  background: #ffffff;
+  font-size: 0.95rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2e4932;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(46, 73, 50, 0.2);
+}
+
+/* LINKS */
+.senha-links {
+  margin: 18px 0;
+  display: flex;
+  gap: 18px;
+}
+
+.link-acao {
+  color: #2e4932;
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ÁREAS EXPANDIDAS */
+.alterar-email-area,
+.alterar-senha-area {
+  margin-top: 18px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #e9f4ea;
+  border: 1px solid #b7d3b9;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.alterar-email-area h2,
+.alterar-senha-area h2 {
+  color: #2e4932;
+  margin-bottom: 10px;
+}
+
+.alterar-email-area input,
+.alterar-senha-area input {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* BOTÃO SECUNDÁRIO */
+.btn-secundario {
+  width: 100%;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 10px;
+  background: #2e4932;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 14px;
+}
+
+.btn-secundario:hover {
+  background: #e39622;
+}
+
+/* BOTÃO SALVAR */
+.btn-salvar {
+  margin-top: 32px;
+  align-self: center;
+  width: 260px;
+  padding: 12px;
+  background: #2e4932;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-salvar:hover {
+  background: #e39622;
+}
+
+/* MENSAGENS */
+.feedback-message {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.feedback-message.success {
+  background: #e6f4ea;
+  border: 1px solid #b8e3c2;
+  color: #22543d;
+}
+
+.feedback-message.error {
+  background: #fde8e8;
+  border: 1px solid #f5c0c0;
+  color: #992929;
+}
+
+/* RESPONSIVO */
+@media (max-width: 860px) {
+  .perfil-card {
+    flex-direction: column;
+    padding: 26px;
+  }
+
+  .perfil-info-bloco {
+    grid-template-columns: 1fr;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .btn-salvar {
+    width: 100%;
+  }
+}
