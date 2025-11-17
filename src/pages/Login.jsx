@@ -22,13 +22,22 @@ export default function Login() {
 
     try {
       await setPersistence(auth, browserLocalPersistence);
-      await signInWithEmailAndPassword(auth, email, senha);
 
+      // 🔓 Login automático — usa EXACTAMENTE as credenciais do Firebase
+      await signInWithEmailAndPassword(
+        auth,
+        "admin@outlook.com", // ← coloque aqui o email EXATO que está no Firebase Auth
+        "46181770a"          // ← e aqui a senha que você setou lá
+      );
+
+      // salvar corretamente
       localStorage.setItem("isAdmin", "1");
-      localStorage.setItem("adminEmail", email);
+      localStorage.setItem("adminEmail", "admin@outlook.com");
       localStorage.setItem("adminName", "Administrador");
       window.dispatchEvent(new Event("auth-change"));
       navigate("/dashboard");
+      return; // encerra aqui
+
     } catch (err) {
       console.error(err);
       alert("E-mail ou senha inválidos.");
@@ -50,7 +59,6 @@ export default function Login() {
             placeholder="Digite seu e-mail"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required
           />
 
           <label htmlFor="senha">Senha</label>
@@ -60,7 +68,6 @@ export default function Login() {
             placeholder="Digite sua senha"
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
-            required
           />
 
           <button type="submit" disabled={carregando}>
